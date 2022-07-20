@@ -45,7 +45,7 @@ export default function Testimonial(props) {
         title={'Testimonial'}
         subHeading={'What My Client Say About Me'}
         />
-        <section className='testimonial-section' id={props.id || ''}>
+        <section className='testimonial-section fade-in' id={props.id || ''}>
             <div className='container'>
                 <div className='row'>
                     <OwlCarousel className='owl-carousel' id='testimonial-carousel'
@@ -55,7 +55,11 @@ export default function Testimonial(props) {
                                 <div className='testi-comment'>
                                     <p>
                                         <i className='fa fa-quote-left'/>
-                                        really cool person.
+                                        Richard Lummus is diligent,
+                                        hard working, and personable to both those he knows
+                                        well and new acquaintances. He also enjoys probelm
+                                        solving and is eager to learn new skills and information
+                                        about the world in general.
                                         <i className='fa fa-quote-right'/>
                                     </p>
                                     <ul className='stars list-unstyled'>
@@ -86,7 +90,7 @@ export default function Testimonial(props) {
                                 <div className='testi-comment'>
                                     <p>
                                         <i className='fa fa-quote-left'/>
-                                        really cool person.
+                                        Hard worker who doen't know how to give up.
                                         <i className='fa fa-quote-right'/>
                                     </p>
                                     <ul className='stars list-unstyled'>
@@ -108,7 +112,7 @@ export default function Testimonial(props) {
                                     </ul>
                                 </div>
                                 <div className='client-info'>
-                                    <h5>connie worther</h5>
+                                    <h5>Val Middleton</h5>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +121,8 @@ export default function Testimonial(props) {
                                 <div className='testi-comment'>
                                     <p>
                                         <i className='fa fa-quote-left'/>
-                                        really cool person.
+                                        Always trys to help everyone and create new ways
+                                        to find solutions to hard probelms.
                                         <i className='fa fa-quote-right'/>
                                     </p>
                                     <ul className='stars list-unstyled'>
@@ -139,7 +144,7 @@ export default function Testimonial(props) {
                                     </ul>
                                 </div>
                                 <div className='client-info'>
-                                    <h5>connie worther</h5>
+                                    <h5>Constance Lummus</h5>
                                 </div>
                             </div>
                         </div>

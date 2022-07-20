@@ -1,41 +1,25 @@
-import React, { useState } from 'react';
+import React from "react";
 import Typical from 'react-typical';
-import imgBack from '../../../src/images/mailz.jpeg';
-import load1 from '../../../src/images/load2.gif';
 import ScreenHeading from '../../Utilities/ScreenHeading/ScreenHeading';
 import ScrollService from '../../Utilities/ScrollService';
 import Animations from '../../Utilities/Animations';
+import Footer from '../../PortfolioContainer/footer/Footer';
 import './ContactMe.css';
 
 
 
-export default function ContactMe(props) {
+    export default function ContactMe(props) {
+  let fadeInScreenHandler = (screen) => {
+    if (screen.fadeInScreen !== props.id) return;
+    Animations.animations.fadeInScreen(props.id);
+  };
 
-    let fadeInScreenHandler = (screen)=>{
-        if(screen.fadeInScreen !== props.id)
-        return
-        Animations.animations.fadeInScreen(props.id)
-    }
     const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    const [message, setMessage] = useState("")
-    const [banner, setBanner] = useState("")
-    const [Bool, setBool] = useState(false)
 
-    const handleName = (e) => {
-        setName(e.target.value);
-    };
-     const handleEmail = (e) => {
-        setEmail(e.target.value);
-    };
-     const handleMessage = (e) => {
-        setMessage(e.target.value);
-    };
 
   return (
-    <div className='main-container' id={props.id || ""}>
+    <div className='main-container fade-in' id={props.id || ""}>
         <ScreenHeading subHeading={"Lets Keep In Touch"}
         title={"Contact Me"} />
         <div className='central-form'>
@@ -43,11 +27,11 @@ export default function ContactMe(props) {
                 <h2 className='title'>
                     <Typical loop={Infinity}
                     steps={[
-                        "Get In Touch",
+                        "Email richard.c.lummus90@gmail.com",
                         1000,
                     ]}
                     />
-                </h2>
+                </h2>{" "}
                           <a href='https://github.com/apocpax'>
                         <i className='fa fa-github-square'></i>
                     </a>
@@ -55,34 +39,8 @@ export default function ContactMe(props) {
                         <i className='fa fa-linkedin-square'></i>
                     </a>
             </div>
-            <div className='back-form'>
-                <div className='img-back'>
-                    <h4>Send Your Email Here</h4>
-                    <img src={imgBack} alt='image not found'/>
-                </div>
-                <form>
-                    <p>{banner}</p>
-                    <label htmlFor='name'>Name</label>
-                    <input type="text"
-                    onChange={handleName} value={name} />
-
-                    <label htmlFor='email'>Email</label>
-                    <input type="email"
-                    onChange={handleEmail} value={email} />
-
-                    <label htmlFor='message'>Message</label>
-                    <textarea type="text"
-                    onChange={handleMessage} value={message} />
-
-                    <div className='send-btn'>
-                        <button type='submit'>
-                            send<i className='fa fa-paper-plane'/>
-                        </button>
-                    </div>
-
-                </form>
             </div>
-        </div>
+      <Footer />
     </div>
-  )
+  );
 }

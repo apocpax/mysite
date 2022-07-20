@@ -14,15 +14,15 @@ export default function AboutMe(props) {
     const fadeInSubscription = ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
     const SCREEN_CONSTSANTS = {
-        description: "hi its me",
+        description: "Hello my name is Richard Lummus. I am full stack developer mainly using MERN stack, a hard worker, and someone who always likes a challenge",
         highlights:{
             bullets:[
-                "cool 1",
-                "cool 1",
-                "cool 1",
-                "cool 1",
-                "cool 1",
-                "cool 1",
+                "MERN full stack developer",
+                "Javascript and Jquery",
+                "Mobile front end design",
+                "Handleing API calls",
+                "quality HTML",
+                "Fundamental and direct CSS",
             ],
             heading: "here are a few highlights:"
         }
